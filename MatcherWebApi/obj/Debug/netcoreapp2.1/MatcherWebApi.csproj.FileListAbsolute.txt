@@ -1,0 +1,14 @@
+C:\Users\asmith\source\repos\MatcherWebApi\MatcherWebApi\bin\Debug\netcoreapp2.1\MatcherWebApi.deps.json
+C:\Users\asmith\source\repos\MatcherWebApi\MatcherWebApi\bin\Debug\netcoreapp2.1\MatcherWebApi.runtimeconfig.json
+C:\Users\asmith\source\repos\MatcherWebApi\MatcherWebApi\bin\Debug\netcoreapp2.1\MatcherWebApi.runtimeconfig.dev.json
+C:\Users\asmith\source\repos\MatcherWebApi\MatcherWebApi\bin\Debug\netcoreapp2.1\MatcherWebApi.dll
+C:\Users\asmith\source\repos\MatcherWebApi\MatcherWebApi\bin\Debug\netcoreapp2.1\MatcherWebApi.pdb
+C:\Users\asmith\source\repos\MatcherWebApi\MatcherWebApi\obj\Debug\netcoreapp2.1\MatcherWebApi.csprojAssemblyReference.cache
+C:\Users\asmith\source\repos\MatcherWebApi\MatcherWebApi\obj\Debug\netcoreapp2.1\MatcherWebApi.csproj.CoreCompileInputs.cache
+C:\Users\asmith\source\repos\MatcherWebApi\MatcherWebApi\obj\Debug\netcoreapp2.1\MatcherWebApi.RazorAssemblyInfo.cache
+C:\Users\asmith\source\repos\MatcherWebApi\MatcherWebApi\obj\Debug\netcoreapp2.1\MatcherWebApi.RazorAssemblyInfo.cs
+C:\Users\asmith\source\repos\MatcherWebApi\MatcherWebApi\obj\Debug\netcoreapp2.1\MatcherWebApi.AssemblyInfoInputs.cache
+C:\Users\asmith\source\repos\MatcherWebApi\MatcherWebApi\obj\Debug\netcoreapp2.1\MatcherWebApi.AssemblyInfo.cs
+C:\Users\asmith\source\repos\MatcherWebApi\MatcherWebApi\obj\Debug\netcoreapp2.1\MatcherWebApi.RazorTargetAssemblyInfo.cache
+C:\Users\asmith\source\repos\MatcherWebApi\MatcherWebApi\obj\Debug\netcoreapp2.1\MatcherWebApi.dll
+C:\Users\asmith\source\repos\MatcherWebApi\MatcherWebApi\obj\Debug\netcoreapp2.1\MatcherWebApi.pdb
