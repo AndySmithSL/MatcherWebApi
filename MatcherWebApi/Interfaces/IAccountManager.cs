@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using MatcherWebApi.Models;
+using System.Collections.Generic;
 
 namespace MatcherWebApi.Interfaces
 {
@@ -7,7 +8,12 @@ namespace MatcherWebApi.Interfaces
         /// <summary>
         /// List of accounts.
         /// </summary>
-        IList<IAccount> Accounts { get; set; }
+        IEnumerable<IAccount> Accounts { get; }
+
+        /// <summary>
+        /// Database context to retrieve the Accounts from.
+        /// </summary>
+        MatcherContext Context { get; set; }
 
         /// <summary>
         /// Create a new account.

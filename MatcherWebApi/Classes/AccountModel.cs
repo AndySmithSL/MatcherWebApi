@@ -1,37 +1,18 @@
 ﻿using MatcherWebApi.Interfaces;
+using MatcherWebApi.Models;
 using System;
 
 namespace MatcherWebApi.Classes
 {
-    public class Account : IAccount
+    public class AccountModel : Account, IAccountModel
     {
         #region Private Declarations
 
         private IAccountNumberGenerator generator = null;
-        private string accountNumber = null;
-        private string name = null;
-
+        
         #endregion Private Declarations
 
         #region Public Properties
-
-        /// <summary>
-        /// The account number as an 8-digit string, i.e. 00112345
-        /// </summary>
-        public string AccountNumber
-        {
-            get => accountNumber ?? (accountNumber = Generator.Create());
-            set => accountNumber = value;
-        }
-
-        /// <summary>
-        /// Name of the account holder.
-        /// </summary>
-        public string Name
-        {
-            get => name ?? throw new NullReferenceException("The name of the account has not been set.");
-            set => name = value;
-        }
 
         /// <summary>
         /// Account number generator
@@ -47,26 +28,31 @@ namespace MatcherWebApi.Classes
         #region Constructors
 
         /// <summary>
-        /// Constructor of the Account class.
+        /// Constructor of the AccountModel class.
         /// </summary>
-        public Account()
+        public AccountModel()
         { }
 
         /// <summary>
-        /// Constructor of the Account class.
+        /// Constructor of the AccountModel class.
         /// </summary>
         /// <param name="name">The name of the account number.</param>
-        public Account(string name)
+        public AccountModel(string name)
             : this(null, name)
         { }
 
         /// <summary>
-        /// Constructor of the Account class.
+        /// Constructor of the AccountModel class.
         /// </summary>
         /// <param name="accountNumber">The account number of the account as an 8-digit string</param>
         /// <param name="name">The name of the account number.</param>
-        public Account(string accountNumber, string name)
+        public AccountModel(string accountNumber, string name)
         {
+            if(String.IsNullOrEmpty(accountNumber))
+            {
+                accountNumber = Generator.Create();
+            }
+
             AccountNumber = accountNumber;
             Name = name;
         }

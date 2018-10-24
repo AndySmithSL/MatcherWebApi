@@ -1,9 +1,15 @@
 ﻿using MatcherWebApi.Enumerators;
+using MatcherWebApi.Models;
 
 namespace MatcherWebApi.Interfaces
 {
     public interface IMatcher
     {
+        /// <summary>
+        /// The database context to retrieve the data
+        /// </summary>
+        MatcherContext Context { get; set; }
+
         /// <summary>
         /// Object for managing the orders.
         /// </summary>

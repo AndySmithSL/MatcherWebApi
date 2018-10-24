@@ -1,5 +1,6 @@
 ﻿using MatcherWebApi.Enumerators;
 using MatcherWebApi.Interfaces;
+using MatcherWebApi.Models;
 using System;
 
 namespace MatcherWebApi.Classes
@@ -8,6 +9,7 @@ namespace MatcherWebApi.Classes
     {
         #region Private Declarations
 
+        private MatcherContext context = null;
         private IOrderManager orderManager = null;
         private ITradeManager tradeManager = null;
         private IAccountManager accountManager = null;
@@ -15,6 +17,15 @@ namespace MatcherWebApi.Classes
         #endregion Private Declarations
 
         #region Public Properties
+
+        /// <summary>
+        /// The database context to retrieve the data
+        /// </summary>
+        public MatcherContext Context
+        {
+            get => context ?? throw new NullReferenceException("The database context has not been set.");
+            set => context = value;
+        }
 
         /// <summary>
         /// Object for managing the orders.
@@ -39,11 +50,30 @@ namespace MatcherWebApi.Classes
         /// </summary>
         public IAccountManager AccountManager
         {
-            get => accountManager ?? (accountManager = new AccountManager());
+            get => accountManager ?? (accountManager = new AccountManager(Context));
             set => accountManager = value;
         }
 
         #endregion Public Properties
+
+        #region Contructor
+
+        /// <summary>
+        /// The constructor of the Matcher class.
+        /// </summary>
+        public Matcher()
+        { }
+
+        /// <summary>
+        /// The constructor of the Matcher class.
+        /// </summary>
+        /// <param name="context">The database context to retrieve the data.</param>
+        public Matcher(MatcherContext context)
+        {
+            Context = context;
+        }
+
+        #endregion Contructor
 
         #region Methods
 
